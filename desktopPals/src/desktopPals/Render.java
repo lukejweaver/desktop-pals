@@ -10,62 +10,48 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class Render extends JPanel {
-	
+public class Render extends JPanel implements Const {
+
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
-	String horizontalMovement = "left", verticalMovement, previousHorizontalMovement;
-		
+	String horizontalMovement = "left", verticalMovement, previousHorizontalMovement = "left";
+
 	Emote heartEmote;
-	Animation leftAnimation, rightAnimation;
-	
+
+	AnimationManager animationManager;
+
 	public Render() {
-		Const constantClass = new Const();
-		
-		heartEmote = new Emote(constantClass.getHeartEmoteFrames());
-		leftAnimation = new Animation(constantClass.getLeftAnimationFrames());
-		rightAnimation = new Animation(constantClass.getRightAnimationFrames());
-		
+		animationManager = new AnimationManager();
+		animationManager.registerAnimation("left", LEFTFRAMES);
+		animationManager.registerAnimation("right", RIGHTFRAMES);
+
+		heartEmote = new Emote(HEARTEMOTEFRAMES, "heart");
+
 		setLocation(0,0);
 		setSize(64, 64);
 		setBackground(new Color(0, 0, 0, 0));
 	}
-	
-	@Override
-	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		Graphics2D g2d = (Graphics2D)g;
-		g2d.drawImage(getFrameForAnimation(), 0, 0, this);
-		if (trueRenderDirection() == "right" && !heartEmote.isComplete()) {
-			g2d.drawImage(getFrameForEmote(), 44, 0, this);			
-		} else if(!heartEmote.isComplete()) {
-			g2d.drawImage(getFrameForEmote(), 0, 0, this);	
-		}
-		
-	}
-	
+
 	public String setHorizontalMovement(String movement) {
-		if (movement != "neither") {
-			previousHorizontalMovement = horizontalMovement;			
-		}
+		previousHorizontalMovement = horizontalMovement;
 		return horizontalMovement = movement;
 	}
-	
+
 	public String getHorizontalMovement() {
 		return horizontalMovement;
 	}
-	
+
 	public String setVerticalMovement(String movement) {
 		return verticalMovement = movement;
 	}
-	
+
 	public String getVerticalMovement() {
 		return verticalMovement;
 	}
-	
+
 	private String trueRenderDirection() {
 		if (horizontalMovement != "neither") {
 			return horizontalMovement;
@@ -73,24 +59,22 @@ public class Render extends JPanel {
 			return previousHorizontalMovement;
 		}
 	}
-	
-	private Animation horizontalAnimationForFrame() {
-		if (trueRenderDirection() == "left") {
-			 return leftAnimation;
-		} else {
-			return rightAnimation;
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		Graphics2D g2d = (Graphics2D)g;
+		g2d.drawImage(getFrameForAnimation(), 0, 0, this);
+		if (trueRenderDirection() == "right" && !heartEmote.isComplete()) {
+			g2d.drawImage(getFrameForEmote(), 44, 0, this);
+		} else if(!heartEmote.isComplete()) {
+			g2d.drawImage(getFrameForEmote(), 0, 0, this);
 		}
+
 	}
-	
-	private Boolean animationShouldReset() {
-		return (trueRenderDirection() != previousHorizontalMovement);
-	}
-	
+
 	private BufferedImage getFrameForAnimation() {
-		if (animationShouldReset()) {
-			horizontalAnimationForFrame().resetAnimation();	
-		}
-		String nextFrame = horizontalAnimationForFrame().getFrame();
+		String nextFrame = animationManager.getAnimation(trueRenderDirection()).getFrame();
 		BufferedImage img = null;
 		try {
 			img = ImageIO.read(new File(nextFrame));
@@ -99,7 +83,7 @@ public class Render extends JPanel {
 		}
 		return img;
 	}
-	
+
 	private BufferedImage getFrameForEmote() {
 		String nextFrame = heartEmote.getFrame();
 		BufferedImage img = null;

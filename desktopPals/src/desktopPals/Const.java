@@ -1,86 +1,187 @@
 package desktopPals;
 
-public final class Const {
-	final String[] heartEmoteFrames = {
-	    "desktopPals/src/desktopPals/heartemote1.png",
-	    "desktopPals/src/desktopPals/heartemote1.png",
-	    "desktopPals/src/desktopPals/heartemote1.png",
-	    "desktopPals/src/desktopPals/heartemote1.png",
-	    "desktopPals/src/desktopPals/heartemote2.png",
-	    "desktopPals/src/desktopPals/heartemote2.png",
-	    "desktopPals/src/desktopPals/heartemote2.png",
-	    "desktopPals/src/desktopPals/heartemote2.png",
-	    "desktopPals/src/desktopPals/heartemote3.png",
-	    "desktopPals/src/desktopPals/heartemote3.png",
-	    "desktopPals/src/desktopPals/heartemote4.png",
-	    "desktopPals/src/desktopPals/heartemote4.png",
-	    "desktopPals/src/desktopPals/heartemote5.png",
-	    "desktopPals/src/desktopPals/heartemote5.png",
-	    "desktopPals/src/desktopPals/heartemote6.png",
-	    "desktopPals/src/desktopPals/heartemote6.png",
-	    "desktopPals/src/desktopPals/heartemote7.png",
-	    "desktopPals/src/desktopPals/heartemote7.png",
-	    "desktopPals/src/desktopPals/heartemote8.png",
-	    "desktopPals/src/desktopPals/heartemote8.png",
-	    "desktopPals/src/desktopPals/heartemote9.png",
-	    "desktopPals/src/desktopPals/heartemote9.png",
-	    "desktopPals/src/desktopPals/heartemote10.png",
-	    "desktopPals/src/desktopPals/heartemote10.png"
+interface Const {
+	final String[] LOADINGFRAMES = {
+		"./desktopPals/src/desktopPals/assets/loading1.png",
+		"./desktopPals/src/desktopPals/assets/loading2.png",
+		"./desktopPals/src/desktopPals/assets/loading3.png",
+		"./desktopPals/src/desktopPals/assets/loading4.png",
+		"./desktopPals/src/desktopPals/assets/loading5.png",
+		"./desktopPals/src/desktopPals/assets/loading6.png",
+		"./desktopPals/src/desktopPals/assets/loading7.png",
+		"./desktopPals/src/desktopPals/assets/loading8.png",
+		"./desktopPals/src/desktopPals/assets/loading9.png",
+		"./desktopPals/src/desktopPals/assets/loading10.png",
+		"./desktopPals/src/desktopPals/assets/loading11.png",
+		"./desktopPals/src/desktopPals/assets/loading12.png",
+		"./desktopPals/src/desktopPals/assets/loading13.png",
+		"./desktopPals/src/desktopPals/assets/loading14.png",
+		"./desktopPals/src/desktopPals/assets/loading15.png",
+		"./desktopPals/src/desktopPals/assets/loading16.png",
+		"./desktopPals/src/desktopPals/assets/loading17.png",
+		"./desktopPals/src/desktopPals/assets/loading18.png",
+		"./desktopPals/src/desktopPals/assets/loading19.png",
+		"./desktopPals/src/desktopPals/assets/loading20.png",
+		"./desktopPals/src/desktopPals/assets/loading21.png",
+		"./desktopPals/src/desktopPals/assets/loading22.png",
+		"./desktopPals/src/desktopPals/assets/loading23.png",
+		"./desktopPals/src/desktopPals/assets/loading24.png",
+		"./desktopPals/src/desktopPals/assets/loading25.png",
+		"./desktopPals/src/desktopPals/assets/loading26.png",
+		"./desktopPals/src/desktopPals/assets/loading27.png",
+		"./desktopPals/src/desktopPals/assets/loading28.png",
+		"./desktopPals/src/desktopPals/assets/loading29.png",
+		"./desktopPals/src/desktopPals/assets/loading30.png",
+		"./desktopPals/src/desktopPals/assets/loading31.png",
+		"./desktopPals/src/desktopPals/assets/loading32.png"
 	};
-		
-	final String[] leftFrames = { 
-		"desktopPals/src/desktopPals/pufferfishleft.png",
-		"desktopPals/src/desktopPals/pufferfishleft.png",
-		"desktopPals/src/desktopPals/pufferfishleft.png",
-		"desktopPals/src/desktopPals/pufferfishleft2.png", 
-		"desktopPals/src/desktopPals/pufferfishleft2.png", 
-		"desktopPals/src/desktopPals/pufferfishleft2.png", 
-		"desktopPals/src/desktopPals/pufferfishleft3.png",
-		"desktopPals/src/desktopPals/pufferfishleft3.png",
-		"desktopPals/src/desktopPals/pufferfishleft3.png", 
-		"desktopPals/src/desktopPals/pufferfishleft4.png",
-		"desktopPals/src/desktopPals/pufferfishleft4.png",
-		"desktopPals/src/desktopPals/pufferfishleft4.png",
-		"desktopPals/src/desktopPals/pufferfishleft3.png",
-		"desktopPals/src/desktopPals/pufferfishleft3.png",
-		"desktopPals/src/desktopPals/pufferfishleft3.png",
-		"desktopPals/src/desktopPals/pufferfishleft2.png",
-		"desktopPals/src/desktopPals/pufferfishleft2.png",
-		"desktopPals/src/desktopPals/pufferfishleft2.png"
+
+	final String[] HUNGRYEMOTEFRAMES = {
+	    "./desktopPals/src/desktopPals/assets/hunger1.png",
+	    "./desktopPals/src/desktopPals/assets/hunger1.png",
+	    "./desktopPals/src/desktopPals/assets/hunger1.png",
+	    "./desktopPals/src/desktopPals/assets/hunger1.png",
+	    "./desktopPals/src/desktopPals/assets/hunger2.png",
+	    "./desktopPals/src/desktopPals/assets/hunger2.png",
+	    "./desktopPals/src/desktopPals/assets/hunger2.png",
+	    "./desktopPals/src/desktopPals/assets/hunger2.png",
+	    "./desktopPals/src/desktopPals/assets/hunger3.png",
+	    "./desktopPals/src/desktopPals/assets/hunger3.png",
+	    "./desktopPals/src/desktopPals/assets/hunger4.png",
+	    "./desktopPals/src/desktopPals/assets/hunger4.png",
+	    "./desktopPals/src/desktopPals/assets/hunger5.png",
+	    "./desktopPals/src/desktopPals/assets/hunger5.png",
+	    "./desktopPals/src/desktopPals/assets/hunger6.png",
+	    "./desktopPals/src/desktopPals/assets/hunger6.png",
+	    "./desktopPals/src/desktopPals/assets/hunger7.png",
+	    "./desktopPals/src/desktopPals/assets/hunger7.png",
+	    "./desktopPals/src/desktopPals/assets/hunger8.png",
+	    "./desktopPals/src/desktopPals/assets/hunger8.png",
+	    "./desktopPals/src/desktopPals/assets/hunger9.png",
+	    "./desktopPals/src/desktopPals/assets/hunger9.png",
+	    "./desktopPals/src/desktopPals/assets/hunger10.png",
+	    "./desktopPals/src/desktopPals/assets/hunger10.png",
+		"./desktopPals/src/desktopPals/assets/hunger11.png",
+	    "./desktopPals/src/desktopPals/assets/hunger11.png",
+		"./desktopPals/src/desktopPals/assets/hunger11.png",
+	    "./desktopPals/src/desktopPals/assets/hunger11.png",
+		"./desktopPals/src/desktopPals/assets/hunger12.png",
+	    "./desktopPals/src/desktopPals/assets/hunger12.png",
+		"./desktopPals/src/desktopPals/assets/hunger12.png",
+	    "./desktopPals/src/desktopPals/assets/hunger12.png"
 	};
-	
-	final String[] rightFrames = { 
-		"desktopPals/src/desktopPals/pufferfishright.png",
-		"desktopPals/src/desktopPals/pufferfishright.png",
-		"desktopPals/src/desktopPals/pufferfishright.png",
-		"desktopPals/src/desktopPals/pufferfishright2.png",
-		"desktopPals/src/desktopPals/pufferfishright2.png",
-		"desktopPals/src/desktopPals/pufferfishright2.png",
-		"desktopPals/src/desktopPals/pufferfishright3.png",
-		"desktopPals/src/desktopPals/pufferfishright3.png",
-		"desktopPals/src/desktopPals/pufferfishright3.png", 
-		"desktopPals/src/desktopPals/pufferfishright4.png",
-		"desktopPals/src/desktopPals/pufferfishright4.png",
-		"desktopPals/src/desktopPals/pufferfishright4.png",
-		"desktopPals/src/desktopPals/pufferfishright3.png",
-		"desktopPals/src/desktopPals/pufferfishright3.png",
-		"desktopPals/src/desktopPals/pufferfishright3.png",
-		"desktopPals/src/desktopPals/pufferfishright2.png",
-		"desktopPals/src/desktopPals/pufferfishright2.png",
-		"desktopPals/src/desktopPals/pufferfishright2.png"
+
+	final String[] PELLETFRAMES = {
+		"./desktopPals/src/desktopPals/assets/foodpellet1.png",
+		"./desktopPals/src/desktopPals/assets/foodpellet2.png",
+		"./desktopPals/src/desktopPals/assets/foodpellet3.png"
 	};
-	
-	public Const() {}
-	
-	public final String[] getHeartEmoteFrames() {
-		return heartEmoteFrames;
-	}
-	
-	public final String[] getLeftAnimationFrames() {
-		return leftFrames;
-	}
-	
-	public final String[] getRightAnimationFrames() {
-		return rightFrames;
-	}
+
+	final String[] HEARTEMOTEFRAMES = {
+	    "./desktopPals/src/desktopPals/assets/heart1.png",
+	    "./desktopPals/src/desktopPals/assets/heart1.png",
+	    "./desktopPals/src/desktopPals/assets/heart1.png",
+	    "./desktopPals/src/desktopPals/assets/heart1.png",
+	    "./desktopPals/src/desktopPals/assets/heart2.png",
+	    "./desktopPals/src/desktopPals/assets/heart2.png",
+	    "./desktopPals/src/desktopPals/assets/heart2.png",
+	    "./desktopPals/src/desktopPals/assets/heart2.png",
+	    "./desktopPals/src/desktopPals/assets/heart3.png",
+	    "./desktopPals/src/desktopPals/assets/heart3.png",
+	    "./desktopPals/src/desktopPals/assets/heart4.png",
+	    "./desktopPals/src/desktopPals/assets/heart4.png",
+	    "./desktopPals/src/desktopPals/assets/heart5.png",
+	    "./desktopPals/src/desktopPals/assets/heart5.png",
+	    "./desktopPals/src/desktopPals/assets/heart6.png",
+	    "./desktopPals/src/desktopPals/assets/heart6.png",
+	    "./desktopPals/src/desktopPals/assets/heart7.png",
+	    "./desktopPals/src/desktopPals/assets/heart7.png",
+	    "./desktopPals/src/desktopPals/assets/heart8.png",
+	    "./desktopPals/src/desktopPals/assets/heart8.png",
+	    "./desktopPals/src/desktopPals/assets/heart9.png",
+	    "./desktopPals/src/desktopPals/assets/heart9.png",
+	    "./desktopPals/src/desktopPals/assets/heart10.png",
+	    "./desktopPals/src/desktopPals/assets/heart10.png",
+		"./desktopPals/src/desktopPals/assets/heart11.png",
+	    "./desktopPals/src/desktopPals/assets/heart11.png",
+		"./desktopPals/src/desktopPals/assets/heart11.png",
+	    "./desktopPals/src/desktopPals/assets/heart11.png",
+		"./desktopPals/src/desktopPals/assets/heart12.png",
+	    "./desktopPals/src/desktopPals/assets/heart12.png",
+		"./desktopPals/src/desktopPals/assets/heart12.png",
+	    "./desktopPals/src/desktopPals/assets/heart12.png"
+	};
+
+		final String[] FRUSTRATEDEMOTEFRAMES = {
+	    "./desktopPals/src/desktopPals/assets/frustrated1.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated1.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated1.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated1.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated2.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated2.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated2.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated2.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated3.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated3.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated4.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated4.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated5.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated5.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated6.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated6.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated7.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated7.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated8.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated8.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated9.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated9.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated10.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated10.png",
+		"./desktopPals/src/desktopPals/assets/frustrated11.png",
+		"./desktopPals/src/desktopPals/assets/frustrated11.png",
+	    "./desktopPals/src/desktopPals/assets/frustrated12.png",
+		"./desktopPals/src/desktopPals/assets/frustrated12.png",
+		"./desktopPals/src/desktopPals/assets/frustrated13.png",
+		"./desktopPals/src/desktopPals/assets/frustrated13.png",
+		"./desktopPals/src/desktopPals/assets/frustrated14.png",
+		"./desktopPals/src/desktopPals/assets/frustrated14.png",
+		"./desktopPals/src/desktopPals/assets/frustrated15.png",
+		"./desktopPals/src/desktopPals/assets/frustrated15.png",
+		"./desktopPals/src/desktopPals/assets/frustrated16.png",
+		"./desktopPals/src/desktopPals/assets/frustrated16.png",
+		"./desktopPals/src/desktopPals/assets/frustrated17.png",
+		"./desktopPals/src/desktopPals/assets/frustrated17.png",
+		"./desktopPals/src/desktopPals/assets/frustrated18.png",
+		"./desktopPals/src/desktopPals/assets/frustrated18.png"
+	};
+
+	final String[] LEFTFRAMES = {
+		"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png"
+	};
+
+	final String[] RIGHTFRAMES = {
+		"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+		"./desktopPals/src/desktopPals/assets/pufferfishright2.png"
+	};
 }

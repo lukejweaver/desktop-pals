@@ -1,11 +1,20 @@
 package desktopPals;
 
-import java.awt.Dimension;
-
 public class DesktopPals {
 
 	public static void main(String[] args) {
-		new Pal("This is transparent", new Dimension(64, 64));
+		LoadingManager loadingManager = new LoadingManager();
+		Thread loadingThread = new Thread(loadingManager);
+		loadingThread.start();
+		Pal pal = new Pal();
+		if (pal.loaded()) {
+			try {
+				loadingManager.terminate();
+				loadingThread.join();
+				pal.setAllVisible();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
-
 }

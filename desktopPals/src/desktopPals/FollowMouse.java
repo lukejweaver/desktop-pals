@@ -1,29 +1,31 @@
 package desktopPals;
 
-import java.awt.Dimension;
+import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.Toolkit;
 import java.util.ArrayList;
-import java.util.Random;
 
-public class Meander extends Action {
+public class FollowMouse extends Action {
 
-	Point meanderPoint;
+	Point mousePoint;
+
 	Boolean isComplete;
-	Dimension screenSize;
 
-	public Meander() {
-		screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		meanderPoint = new Point(0,0);
+	int duration, durationCounter;
+
+	public FollowMouse() {
+		duration = 400;
+		durationCounter = 0;
 		isComplete = true;
+		mousePoint = new Point(0, 0);
 	}
 
 	@Override
 	public boolean isComplete(Rectangle currentPosition) {
-		if ((currentPosition.x >= getTargetPoint().x - 2 && currentPosition.x <= getTargetPoint().x + 2) &&
-			(currentPosition.y >= getTargetPoint().y - 2 && currentPosition.y <= getTargetPoint().y + 2)) {
+		if (duration == durationCounter) {
 			isComplete = true;
+		} else {
+			incrementDurationCounter();
 		}
 		return isComplete;
 	}
@@ -31,20 +33,24 @@ public class Meander extends Action {
 	@Override
 	public void beginAction() {
 		isComplete = false;
-		generateNewTargetPoint();
+		durationCounter = 0;
 	}
 
 	@Override
 	public Point getTargetPoint() {
-		return meanderPoint;
+		generateNewTargetPoint();
+		return mousePoint;
 	}
 
 	@Override
 	public void generateNewTargetPoint() {
-		Random rand = new Random();
-		int x = rand.nextInt(screenSize.width - 64);
-		int y = rand.nextInt(screenSize.height - 64);
-		meanderPoint = new Point(x,y);
+		int mouseX = MouseInfo.getPointerInfo().getLocation().x + 15;
+		int mouseY = MouseInfo.getPointerInfo().getLocation().y + 15;
+		mousePoint = new Point(mouseX, mouseY);
+	}
+
+	private void incrementDurationCounter() {
+		durationCounter += 1;
 	}
 
 	@Override
@@ -57,5 +63,6 @@ public class Meander extends Action {
 	protected void beginAction(Rectangle currentPosition) {
 		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Unimplemented method 'beginAction'");
-	};
+	}
+
 }

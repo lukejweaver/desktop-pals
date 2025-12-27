@@ -4,6 +4,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.HashMap;
 import java.util.Random;
+import java.lang.Math;
 
 public class ActionManager {
 	Action meanderAction, feedingAction, followMouse, currentAction, runAction;
@@ -23,7 +24,7 @@ public class ActionManager {
 
 	Boolean differentMovement = false;
 
-	int velX = 2, velY = 2;
+	int velX = 2, velY = 2, newVelX = 0, newVelY = 0, maxVelocity = 5;
 
 	int currentActionStep = 0;
 
@@ -61,6 +62,10 @@ public class ActionManager {
 
 	public void setVelY(int newVal) {
 		velY = newVal;
+	}
+
+	public void setMaxVelocity(int newVal) {
+		maxVelocity = newVal;
 	}
 
 	// Not sure if this is the best way to do this or if it would be better to use:
@@ -110,6 +115,38 @@ public class ActionManager {
 		}
 	}
 
+	public int getNewestX() {
+		return newVelX;
+	}
+
+	public int getNewestY() {
+		return newVelY;
+	}
+
+	private void updateNewest(Point p0) {
+		if ((p0.x >= currentAction.getTargetPoint().x - maxVelocity/2 && p0.x <= currentAction.getTargetPoint().x + maxVelocity/2) &&
+			(p0.y >= currentAction.getTargetPoint().y - maxVelocity/2 && p0.y <= currentAction.getTargetPoint().y + maxVelocity/2)) {
+			newVelX = 0;
+			newVelY = 0;
+			return;
+		}
+
+		Point p = currentAction.getTargetPoint();
+		double t = Math.pow(
+			Math.pow(p.x, 2) + Math.pow(p0.x, 2) + Math.pow(p.y, 2) + Math.pow(p0.y, 2) - 2.0*p.x*p0.x - 2.0*p.y*p0.y,
+			 -0.5
+		) * maxVelocity;
+		double subtractedPX = (p.x - p0.x) * t;
+		double subtractedPY = (p.y - p0.y) * t;
+
+		// System.out.println(p0.x);
+		// System.out.println(t);
+		// System.out.println((int) (subtractedPX));
+		// System.out.println((int) (subtractedPY));
+		newVelX = (int) (subtractedPX);
+		newVelY = (int) (subtractedPY);
+	}
+
 	private String previousMovement() {
 		return previousSideMovement;
 	}
@@ -117,6 +154,7 @@ public class ActionManager {
 	private void updateMovements(Point framePoint) {
 		horizontalMovement(framePoint.x);
 		verticalMovement(framePoint.y);
+		updateNewest(framePoint);
 	}
 
 	private void chooseNewAction() {
@@ -128,9 +166,8 @@ public class ActionManager {
 
 	private void setVelocityRandom() {
 		Random rand = new Random();
-		int newVel = rand.nextInt(2) + 1;
-		velX = newVel;
-		velY = newVel;
+		int newVel = (int) (rand.nextGaussian()*1 + 5);
+		maxVelocity = newVel;
 	}
 
 
@@ -169,7 +206,7 @@ public class ActionManager {
 	}
 
 	private boolean isCurrentActionComplete(Rectangle comparisonRectangle) {
-		return currentAction.isComplete(comparisonRectangle);
+		return currentAction.isComplete(comparisonRectangle, maxVelocity);
 	}
 
 	private void registerActions() {

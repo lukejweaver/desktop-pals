@@ -21,7 +21,7 @@ public class FollowMouse extends Action {
 	}
 
 	@Override
-	public boolean isComplete(Rectangle currentPosition) {
+	public boolean isComplete(Rectangle currentPosition, int maxVelocity) {
 		if (duration == durationCounter) {
 			isComplete = true;
 		} else {

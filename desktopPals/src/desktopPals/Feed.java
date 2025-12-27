@@ -21,7 +21,7 @@ public class Feed extends Action {
 	}
 
 	@Override
-	public boolean isComplete(Rectangle currentPosition) {
+	public boolean isComplete(Rectangle currentPosition, int maxVelocity) {
 		if (currentPellet != null) {updatePellets(currentPosition);}
 		if (!pellets.contains(currentPellet) || pellets.size() != lastSize) {
 			findClosestPellet(currentPosition);

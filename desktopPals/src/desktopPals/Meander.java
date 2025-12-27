@@ -20,9 +20,9 @@ public class Meander extends Action {
 	}
 
 	@Override
-	public boolean isComplete(Rectangle currentPosition) {
-		if ((currentPosition.x >= getTargetPoint().x - 2 && currentPosition.x <= getTargetPoint().x + 2) &&
-			(currentPosition.y >= getTargetPoint().y - 2 && currentPosition.y <= getTargetPoint().y + 2)) {
+	public boolean isComplete(Rectangle currentPosition, int maxVelocity) {
+		if ((currentPosition.x >= getTargetPoint().x - maxVelocity/2 && currentPosition.x <= getTargetPoint().x + maxVelocity/2) &&
+			(currentPosition.y >= getTargetPoint().y - maxVelocity/2 && currentPosition.y <= getTargetPoint().y + maxVelocity/2)) {
 			isComplete = true;
 		}
 		return isComplete;

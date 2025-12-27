@@ -14,7 +14,7 @@ public abstract class Action {
 	// Consider following the advice of comment: https://stackoverflow.com/questions/63413274/is-it-possible-to-overload-abstract-methods-in-an-abstract-java-class-but-imple
 	// and implement a manager
 
-	public abstract boolean isComplete(Rectangle currentPosition);
+	public abstract boolean isComplete(Rectangle currentPosition, int maxVelocity);
 
 	public abstract void beginAction();
 

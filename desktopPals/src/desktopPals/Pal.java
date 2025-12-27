@@ -82,7 +82,7 @@ public class Pal implements ActionListener, Const {
 	}
 
 	public void setAllVisible() {
-		controlFrame.setToVisible();
+		// controlFrame.setToVisible();
 		parentFrame.setVisible(true);
 	}
 
@@ -137,8 +137,7 @@ public class Pal implements ActionListener, Const {
 		if (clickCount >= 5) {
 			animationManager.addRenderableEmotion("frustrated");
 			actionManager.setCurrentAction(ActionManager.Actions.RUN, parentFrame.getRectangle());
-			actionManager.setVelX(3);
-			actionManager.setVelY(3);
+			actionManager.setMaxVelocity(10);
 			clickCount = 0;
 		}
 
@@ -160,16 +159,8 @@ public class Pal implements ActionListener, Const {
 	}
 
 	private void moveFrame() {
-		if (actionManager.getHorizontalMovement() == "left") {
-			parentFrame.setX(-actionManager.getVelX());
-		} else if (actionManager.getHorizontalMovement() == "right") {
-			parentFrame.setX(actionManager.getVelX());
-		}
-		if (actionManager.getVerticalMovement() == "up") {
-			parentFrame.setY(-actionManager.getVelY());
-		} else if (actionManager.getVerticalMovement() == "down") {
-			parentFrame.setY(actionManager.getVelY());
-		}
+		parentFrame.setX(actionManager.getNewestX());
+		parentFrame.setY(actionManager.getNewestY());
 		parentFrame.updateLocation();
 	}
 

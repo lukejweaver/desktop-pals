@@ -155,33 +155,87 @@ interface Const {
 		"./desktopPals/src/desktopPals/assets/frustrated18.png"
 	};
 
-	final String[] LEFTFRAMES = {
-		"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishleft2.png"
-	};
+	// final String[] LEFTFRAMES = {
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft1.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft3.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishleft2.png"
+	// };
+
+	// final String[] RIGHTFRAMES = {
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
+	// 	"./desktopPals/src/desktopPals/assets/pufferfishright2.png"
+	// };
 
 	final String[] RIGHTFRAMES = {
-		"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright1.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright3.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright2.png",
-		"./desktopPals/src/desktopPals/assets/pufferfishright2.png"
+		"./desktopPals/src/desktopPals/assets/hamsterright1.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright1.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright1.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright2.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright2.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright2.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright3.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright3.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright3.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright4.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright4.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright4.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright5.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright5.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright5.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright6.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright6.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright6.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright7.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright7.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright7.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright8.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright8.png",
+		"./desktopPals/src/desktopPals/assets/hamsterright8.png",
+	};
+
+	final String[] LEFTFRAMES = {
+		"./desktopPals/src/desktopPals/assets/hamsterleft1.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft1.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft1.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft2.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft2.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft2.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft3.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft3.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft3.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft4.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft4.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft4.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft5.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft5.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft5.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft6.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft6.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft6.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft7.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft7.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft7.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft8.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft8.png",
+		"./desktopPals/src/desktopPals/assets/hamsterleft8.png"
 	};
 }
